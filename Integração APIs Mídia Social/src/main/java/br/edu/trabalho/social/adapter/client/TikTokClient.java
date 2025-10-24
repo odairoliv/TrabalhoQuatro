@@ -1,0 +1,2 @@
+package br.edu.trabalho.social.adapter.client;
+public class TikTokClient { public static class Video { public final String vid; public final String url; public Video(String v,String u){vid=v;url=u;} } public Video upload(String description, byte[] mp4, String token){ return new Video("tt-"+System.nanoTime(), "https://tiktok.com/v/"+Math.abs(description.hashCode())); } public boolean removeVideo(String vid){ return true; } public long views(String vid){ return 100; } public long likes(String vid){ return 40; } public long comments(String vid){ return 7; } }

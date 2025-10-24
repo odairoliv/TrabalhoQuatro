@@ -1,0 +1,2 @@
+package br.edu.trabalho.social.adapter.client;
+public class TwitterClient { public record Tweet(String id, String link){} public Tweet post(String text,String mediaId,String token){ return new Tweet("tw-"+System.nanoTime(),"https://x.com/t/"+Math.abs(text.hashCode())); } public boolean delete(String id,String token){ return true; } public long likes(String id){ return 10; } public long retweets(String id){ return 2; } }

@@ -1,0 +1,2 @@
+package br.edu.trabalho.social.adapter.client;
+public class LinkedInClient { public static class Share { public final String urn; public final String url; public Share(String u,String l){urn=u;url=l;} } public Share shareText(String text, String orgId, String token){ return new Share("li-"+System.nanoTime(), "https://linkedin.com/feed/update/"+Math.abs(text.hashCode())); } public boolean deleteShare(String urn){ return true; } public long reactions(String urn){ return 12; } public long shares(String urn){ return 3; } public long comments(String urn){ return 4; } }

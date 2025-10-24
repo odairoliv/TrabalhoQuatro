@@ -1,0 +1,2 @@
+package br.edu.trabalho.social.adapter.client;
+public class InstagramClient { public static class Post { public final String code; public final String permalink; public Post(String c,String p){code=c;permalink=p;} } public Post create(String caption, byte[] img, String accessToken){ return new Post("ig-"+System.nanoTime(), "https://instagram.com/p/"+Math.abs(caption.hashCode())); } public boolean remove(String code){ return true; } public long hearts(String code){ return 25; } public long comments(String code){ return 5; } }

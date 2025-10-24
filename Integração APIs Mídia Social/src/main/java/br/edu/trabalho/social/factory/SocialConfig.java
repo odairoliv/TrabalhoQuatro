@@ -1,0 +1,3 @@
+package br.edu.trabalho.social.factory;
+import java.util.Optional;
+public class SocialConfig { public Optional<String> twitterToken(){ return Optional.ofNullable(System.getenv("TWITTER_TOKEN")); } public Optional<String> instagramToken(){ return Optional.ofNullable(System.getenv("INSTAGRAM_TOKEN")); } public Optional<String> linkedinToken(){ return Optional.ofNullable(System.getenv("LINKEDIN_TOKEN")); } public Optional<String> linkedinOrgId(){ return Optional.ofNullable(System.getenv("LINKEDIN_ORG_ID")); } public Optional<String> tiktokToken(){ return Optional.ofNullable(System.getenv("TIKTOK_TOKEN")); } }
